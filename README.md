@@ -38,5 +38,5 @@ Its involves the exploring of data to answer some question such as
 - which customer ID has the highest Subcription type?
 - What is the average subscription duraion. 
 
-### Data Anaysis
+### Data Analysis
 
