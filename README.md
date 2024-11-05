@@ -57,4 +57,70 @@ Its involves the exploring of data to answer some question such as
 This is where we conclude some basic lines of type codes, Queries or even DAX expressions use during the analysis
 
 ```` SQL
+CREATE DATABASE LITA_CAPSTONE_PROJECT_2_DB
+
+select * from[dbo].[CUSTOMER DATA 1]
+
+.....1 Retrieve the total number of customers from each region.
+Select Region,count(DISTINCT CustomerID) as Total_customers
+from[dbo].[CUSTOMER DATA 1]
+group by Region;
+
+
+.... 2 The most popular subscription type by the number of customers...
+Select top 1 subscriptiontype,
+count(distinct CustomerID)as Total_customers
+from[dbo].[CUSTOMER DATA 1]
+group by subscriptiontype
+Order by Total_customers desc
+
+
+  ...... 3 find customers who canceled their subscription within 6 months....
+  Select'Customer'IDS
+  from [dbo].[CUSTOMER DATA 1]
+  Where (DATEDIFF(DAY,subscriptionstart,subscriptionend))<=6;
+
+   ......4 calculate the average subscription duration for all customers.
+   Select AVG(DATEDIFF(day,subscriptionstart,subscriptionend))as AVG_subscription_duration
+   FROM [dbo].[CUSTOMER DATA 1]
+
+
+  ...... 5 find customers with subscriptions longer than 12 months.
+  select 
+  CustomerID,
+  customer_Name,
+  Subscription_start_date,
+  Subscription_end_date
+  from
+  [dbo].[CUSTOMER DATA 1]
+  WHERE
+  DATEDIFF(MONTH,subscriptionstartdate,subscriptionenddate)>12;--
+  'Adjust'- based on SQl dialect
+
+  from[dbo].[CUSTOMER DATA 1]
+   Where DATEDIFF(MONTH,subscriptionstartdate,subscriptionenddate)>12;
+
+   ...... 6 calculate total revenue by subscription type.
+   select subscriptiontype,
+   SUM(revenue)as total_revenue 
+   from[dbo].[CUSTOMER DATA 1]
+   group by 
+   SubscriptionType;
+
+  ......7 find the top 3 regions by subscription cancellations..
+  select top 3 region,
+  count(*)as Subscriptionend_count
+  from[dbo].[CUSTOMER DATA 1] 
+  where SubscriptionEnd is null
+  group by region
+  Order by Subscriptionend_count desc
+  
+
+  .......8 find the total number of active and canceled subscriptions.
+ select canceled,
+ count(*) as'total_subcriptions'
+ From[dbo].[CUSTOMER DATA 1]
+ group by
+ canceled;
+  
 
