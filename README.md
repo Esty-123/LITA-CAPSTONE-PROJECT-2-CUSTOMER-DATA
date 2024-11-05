@@ -124,5 +124,6 @@ Order by Total_customers desc
  canceled;
 
 ### Data Visualization
-  
+  ![image](https://github.com/user-attachments/assets/b03922a3-17f3-4bb5-b771-aa34886deae7)
+
 
