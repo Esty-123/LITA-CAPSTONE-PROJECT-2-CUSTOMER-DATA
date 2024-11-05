@@ -122,5 +122,7 @@ Order by Total_customers desc
  From[dbo].[CUSTOMER DATA 1]
  group by
  canceled;
+
+### Data Visualization
   
 
