@@ -13,6 +13,9 @@ Data Cleaning and Preparation
 Exploratory Data Analysis
 
 [Data Analysis](data-analysis)
+
+Data Visualization
+
 ### Project Overview
 
 This project aims to implement customer segmentation for a subscription-based service to better understand and cater to different customer groups. By analyzing customer data, the project will divide the customer base into distinct segments based on their behaviors, preferences, and usage patterns. The goal is to identify key characteristics of each segment to inform targeted marketing strategies, enhance customer retention, and personalize offerings.
@@ -47,7 +50,11 @@ This process focuses on preparing the dataset for analysis by identifying and re
 Its involves the exploring of data to answer some question such as
 - What  is the overall customer Behaviour ? 
 - which customer ID has the highest Subcription type?
-- What is the average subscription duraion. 
-
+- What is the average subscription duraion.
+  
 ### Data Analysis
+---
+This is where we conclude some basic lines of type codes, Queries or even DAX expressions use during the analysis
+
+```` SQL
 
